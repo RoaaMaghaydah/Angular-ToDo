@@ -13,7 +13,8 @@ export class TodoComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 add(data:string):void{
-  console.log("add")
+ if(data!==""){
   this.newTodos.push(data)
+ }
 }
 }

@@ -31,7 +31,9 @@ export class TodosComponentComponent implements OnInit {
     return this.num
   }
   update2(ind: number,str:string): void {
+    if(str!==""){
     this.todos[ind]=str
+    }
     this.show=false;
   }
 }
