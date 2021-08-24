@@ -1,0 +1,28 @@
+<app-todo-component [newTodos]="todos"></app-todo-component>
+<br>
+<br>
+__________________________________________
+<ul *ngFor="let todo of todos, let i=index">
+<li> 
+    {{todo}}
+</li>
+<button (click)="delete(i)"> delete</button>
+<button (click)="complete(i)">complete</button>
+<button (click)="update(i)"> update </button>
+</ul>
+<ng-template [ngIf]="show" [ngIfElse]="notShow">
+    <input type="text" placeholder="updete here" [(ngModel)]="list"/>
+    <button (click)='update2(num,list)' >update</button>
+  </ng-template>
+  
+  <ng-template #notShow>
+    <p>
+         
+  </p>
+  </ng-template>
+<h1>completed task</h1>
+<ul *ngFor="let com of comp, let i=index">
+    <li> 
+        {{com}}
+</li>
+ </ul>
